@@ -1,0 +1,35 @@
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+
+name: 🆕 Feature
+description: Something new or an extension of what exists.
+labels: ["triage"]
+type: "Feature"
+projects: ["GoCheckIt/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A feature adds new functionality to the system
+  - type: dropdown
+    id: impact
+    attributes:
+      label: What is the impact of this feature?
+      description: How many existing customers does it affect?
+      options:
+        - 0
+        - 1
+        - 25%
+        - 50%
+        - 75%
+        - 100%
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: specification
+    attributes:
+      label: Description
+      description: Include as much detail as possible
+      placeholder: Describe the feature
+    validations:
+      required: true
