@@ -1,0 +1,56 @@
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+
+name: 🐞 Bug
+description: File a bug report.
+title: "[Bug]: "
+labels: ["triage"]
+type: "Bug"
+projects: ["GoCheckIt/3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A bug is when the system behaves differently to what is expected
+  - type: textarea
+    id: expectation
+    attributes:
+      label: What is the behaviour you expected?
+      description: Be specific about the behaviour you expected
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: textarea
+    id: reality
+    attributes:
+      label: What actually happened?
+      description: Include as much detail as possible
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code.
+      render: shell
