@@ -10,11 +10,19 @@ body:
     attributes:
       value: |
         A feature adds new functionality to the system
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem(s) will this feature solve?
+      description: Identify the need.
+      placeholder: Describe the problem
+    validations:
+      required: true
   - type: dropdown
     id: impact
     attributes:
-      label: What is the impact of this feature?
-      description: How many existing customers does it affect?
+      label: How many customers does it benefit at present?
+      description: Assess the impact of this feature.
       options:
         - 0
         - 1
@@ -28,8 +36,14 @@ body:
   - type: textarea
     id: specification
     attributes:
-      label: Description
-      description: Include as much detail as possible
+      label: Feature Description
+      description: Describe the feature requirements and limitations.
       placeholder: Describe the feature
     validations:
       required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Helpful references
+      description: Links, pictures or other designs which solve the same problem.
+      placeholder: Include helpful references
