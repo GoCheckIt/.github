@@ -1,36 +1,17 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-forms.json
 # https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
 
 name: 🆕 Feature
-description: Something new or an extension of what exists.
+description: The solution to a Problem.
 labels: ["triage"]
 type: "Feature"
 projects: ["GoCheckIt/3"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        A feature adds new functionality to the system
   - type: textarea
     id: problem
     attributes:
       label: What problem(s) will this feature solve?
-      description: Identify the need.
-      placeholder: Describe the problem
-    validations:
-      required: true
-  - type: dropdown
-    id: impact
-    attributes:
-      label: How many customers does it benefit at present?
-      description: Assess the impact of this feature.
-      options:
-        - 0
-        - 1
-        - 25%
-        - 50%
-        - 75%
-        - 100%
-      default: 0
+      description: 'Describe or reference the problem. Link to specific GitHub issues if logged. Type # to get started.'
     validations:
       required: true
   - type: textarea
@@ -38,7 +19,6 @@ body:
     attributes:
       label: Feature Description
       description: Describe the feature requirements and limitations.
-      placeholder: Describe the feature
     validations:
       required: true
   - type: textarea
@@ -46,4 +26,3 @@ body:
     attributes:
       label: Helpful references
       description: Links, pictures or other designs which solve the same problem.
-      placeholder: Include helpful references

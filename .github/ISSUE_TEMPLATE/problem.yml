@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-forms.json
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+
+name: 🧩 Problem
+description: A refined problem statement from a business use case.
+labels: ["triage"]
+type: "Problem"
+projects: ["GoCheckIt/3"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the problem?
+      placeholder: Describe the problem hierarchy...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reach
+    attributes:
+      label: How many customers does it impact at present?
+      options:
+        - '0'
+        - '1'
+        - '3'
+        - 25%
+        - 50%
+        - 75%
+        - 100%
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: How severe are the consequences of the problem?
+      options:
+        - Small
+        - Medium
+        - Large
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How confident are you in your assessment of the impact and severity of the problem?
+      options:
+        - 0%
+        - 7%
+        - 15%
+        - 23%
+        - 38%
+        - 61%
+        - 100%
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggestion for a solution
+      placeholder: Optional suggestion for a solution to the problem..

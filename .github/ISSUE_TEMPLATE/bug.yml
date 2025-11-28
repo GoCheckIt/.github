@@ -1,16 +1,13 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-forms.json
 # https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
 
 name: 🐞 Bug
-description: File a bug report.
+description: An unexpected problem or behavior in existing functionality.
 title: "[Bug]: "
 labels: ["triage"]
 type: "Bug"
 projects: ["GoCheckIt/3"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        A bug is when the system behaves differently to what is expected
   - type: textarea
     id: expectation
     attributes:
