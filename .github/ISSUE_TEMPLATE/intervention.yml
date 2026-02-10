@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-issue-forms.json
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+
+name: 🛟 Intervention
+description: Assistance to circumvent missing application functionality.
+labels: ["triage", "intervention"]
+type: "Task"
+projects: ["GoCheckIt/3"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Describe the intervention and attach relevent resources
+    validations:
+      required: true
